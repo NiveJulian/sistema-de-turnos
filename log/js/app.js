@@ -1,7 +1,8 @@
-const mostrarPediatras = document.getElementById('prof1')
-const contenedorDoctores = document.getElementById('cont-doctores')
+const mostrarPediatras = document.getElementById('prof1');
+const contenedorDoctores = document.getElementById('cont-doctores');
+const mostrasCirujanos = document.getElementById('prof2')
 
-let pediatras = [
+let catPediatras = [
 	{
 		id: 1,
 		nombre: "Don Pepito",
@@ -33,10 +34,43 @@ let pediatras = [
 		edad: "0 a 9 años",
 		horario: "9hs a 19hs",
 	},
-]
+];
 
+let catCirujanos = [
+    {
+        id: 1,
+        nombre: "Don yeyito",
+        especialista: "Pediatria",
+        edad: "0 a 9 años",
+        horario: "9hs a 19hs",
+    },
 
-pediatras.forEach((pediatra) => {
+    {
+        id: 2,
+        nombre: "Don pepe",
+        especialista: "Pediatria",
+        edad: "0 a 9 años",
+        horario: "9hs a 19hs",
+    },
+
+    {
+        id: 3,
+        nombre: "Don merqui",
+        especialista: "Pediatria",
+        edad: "0 a 9 años",
+        horario: "9hs a 19hs",
+    },
+
+    {
+        id: 4,
+        nombre: "Don telechea",
+        especialista: "Pediatria",
+        edad: "0 a 9 años",
+        horario: "9hs a 19hs",
+    },
+];
+
+catPediatras.forEach((pediatra) => {
 		const div = document.createElement('div')
 		div.classList.add('doctores')
 		div.innerHTML = `
@@ -50,7 +84,23 @@ pediatras.forEach((pediatra) => {
 		mostrarPediatras.addEventListener('click', () => {
 			contenedorDoctores.appendChild(div)
 		})
-		
-		
-	})
+	});
 
+
+	
+
+catCirujanos.forEach((cirujanos) => {
+		const div = document.createElement('div')
+		div.classList.add('doctores')
+		div.innerHTML = `
+        <h3>${cirujanos.nombre}</h3>
+       	<p>${cirujanos.especialista}</p>
+      	<p>Edades: ${cirujanos.edad}</p>
+        <p>Horario: ${cirujanos.horario}</p>
+        <button id="agregar${cirujanos.id}" class="btn">TURNOS</button>
+		`
+		
+		mostrasCirujanos.addEventListener('click', () => {
+			contenedorDoctores.appendChild(div)
+		})
+	})
