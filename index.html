@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sistema de Turnos</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,39 +17,47 @@
 			</ul>
 			<ul class="nav-menu">
 				<li><a href="index.html">Inicio</a></li>
-				<li><a href="#">❔</a></li>
+				<li><a href="#">Ayuda❔</a></li>
 			</ul>
 		</nav>
 	</div>
 
 	<div class="container">
-		<div class="container-cards">
+		
+	<div class="container-cards">
 			<h1>RESERVA TU TURNO</h1>
-
-		<div class="profecionales">
+			<div id="emergenteid" class="emergente">
 				
-			<div id="prof1" class="box-selector"><a href="#">Pediatra 🎈</a>
+				<button onClick="goHome();" class="close-button">
+					<div class="close-button__line close-button__line--first"></div>
+					<div class="close-button__line close-button__line--second"></div>
+				</button>
+			<div id="cont-doctores" class="view-doctores"></div>
+			</div>
+			<div class="profecionales">
+			
+			<div id="prof1" class="box-selector"><a href="#">Pediatras 🎈</a>
 					</div>
 
-			<div id="prof2" class="box-selector"><a href="#">Cirujano 🧪</a></div>
+			<div id="prof2" class="box-selector"><a href="#">Cirujanos 🧪</a></div>
 
-			<div id="prof3" class="box-selector"><a href="#">Dermatologo ✨</a></div>
+			<div id="prof3" class="box-selector"><a href="#">Dermatologos ✨</a></div>
 
-			<div id="prof4" class="box-selector"><a href="#">Oftalmologo 🕶</a></div>
+			<div id="prof4" class="box-selector"><a href="#">Oftalmologos 🕶</a></div>
 
-			<div id="prof5" class="box-selector"><a href="#">Dentista 🦷</a></div>
+			<div id="prof5" class="box-selector"><a href="#">Dentistas 🦷</a></div>
 
-			<div id="prof6" class="box-selector"><a href="#">Otorrinolaringología 👃</a></div>
+			<div id="prof6" class="box-selector"><a href="#">Otorrinolaringologías 👃</a></div>
 				
+			</div>
+			<div>
+				
+			</div>
 		</div>
-			
 	</div>
 
-	<div id="cont-doctores" class="view-doctores"></div>
 
-</div>
-
-<script src="log/js/app.js"></script>
-<script src="log/js/categorias.js"></script>
+	<script src="log/js/app.js"></script>
+	<script src="log/js/categorias.js"></script>
 </body>
 </html>
